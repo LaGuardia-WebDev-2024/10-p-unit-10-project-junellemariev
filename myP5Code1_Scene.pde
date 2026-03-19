@@ -1,8 +1,8 @@
-var bakeryLabels = ["Crossiants","Baguettes"];
+var bakeryLabels = ["Crossiants","Baguettes", "Cupcakes" ];
 
 setup = function() {
 
-  size(400, 400); 
+  size(600, 400); 
   background(0,0,0,0);
 
   var crossiantX = 60;

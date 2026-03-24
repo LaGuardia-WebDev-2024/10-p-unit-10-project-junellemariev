@@ -16,7 +16,7 @@ html{
 
 #myCanvas1 {
   border: 1px solid rgba(0, 0, 0, 0);
-  border-radius: 0px;
+  border-radius: 60px;
   background-image: url("https://static.wikia.nocookie.net/hellokitty/images/0/05/Mariland-map.png/revision/latest?cb=20250814210109");
   background-size: cover;
   background-position: center;
@@ -24,8 +24,12 @@ html{
 }
 
 #myCanvas2 {
-  border: 1px solid black;
-  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 60px;
+  background-image: url("https://static.wikia.nocookie.net/hellokitty/images/0/05/Mariland-map.png/revision/latest?cb=20250814210109");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 

@@ -10,7 +10,8 @@ var planetTotal = 3;
 var planetFound = 0;
 
 setup = function() {
-   size(600, 450); 
+   size(790, 610);
+   background(0,0,0,0); 
 
    reset();
 }

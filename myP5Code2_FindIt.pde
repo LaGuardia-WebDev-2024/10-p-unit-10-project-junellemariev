@@ -25,13 +25,27 @@ draw = function(){
    }
 
   display();
+
+var label = mouseX + "," + mouseY;
+fill(40,40,40)
+textSize(30);
+text(label, 50, 100);
+
 }
 
+var backgroundImage1 = 0;
 
+//change scene
 mouseClicked = function(){
   check(mouseX, mouseY);
+
+  if(mouseY>435){
+      backgroundImage1 = 1;
+  }
+
 }
 
+//heart being clicked
 var check = function(xClick, yClick){
   for(var i = 0; i < planetXPos.length; i++){
     if(dist(xClick - 5, yClick - 5, planetXPos[i], planetYPos[i])<15){
@@ -42,8 +56,14 @@ var check = function(xClick, yClick){
   }
 }
 
+var funImage = loadImage("https://static.vecteezy.com/system/resources/thumbnails/007/994/607/small/rainbow-coloured-hand-painted-watercolour-background-free-vector.jpg");
+
 var display = function(){
   background(100,100,100,0);
+
+  if(backgroundImage1 ==1){
+    image(funImage ,0, 0, width, height)
+  }
 
   fill(200,200,0);
   textSize(20);
@@ -56,6 +76,7 @@ var display = function(){
     text(star, starXPos[i], starYPos[i]);
   }
 
+//text box
   fill(173,208,179);
   noStroke();
   rect(0,570,790,70);
@@ -63,7 +84,7 @@ var display = function(){
   text("Find The " + planet + "s   |   " + planet + " " + planetFound + "/" + planetTotal, 50, 595);
 
   if(planetFound == planetTotal){
-    fill(47,76,57);
+    fill(38, 153, 38);
     textSize(50);
     text("Press 'r' to restart the game", 50, 200);
   }
@@ -76,14 +97,14 @@ var reset = function(){
   planetYPos = [];
   planetFound = 0;
 
-
+//position of stars and hearts
   for(var i = 0; i < starTotal; i++){
-    starXPos.push(random(0,600));
-    starYPos.push(random(0,400));
+    starXPos.push(random(30,750));
+    starYPos.push(random(40,570));
   }
 
   for(var i = 0; i < planetTotal; i++){
-    planetXPos.push(random(0,600));
-    planetYPos.push(random(0,400));
+    planetXPos.push(random(30,750));
+    planetYPos.push(random(40,550));
   }
 }

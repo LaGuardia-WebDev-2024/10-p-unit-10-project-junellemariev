@@ -1,11 +1,11 @@
 var starXPos = [];
 var starYPos = [];
-var star = "⭐️";
+var star = "✨";
 var starTotal = 100;
 
 var planetXPos = [];
 var planetYPos = [];
-var planet = "🪐";
+var planet = "💛";
 var planetTotal = 3;
 var planetFound = 0;
 
@@ -43,7 +43,7 @@ var check = function(xClick, yClick){
 }
 
 var display = function(){
-  background(100,100,100);
+  background(100,100,100,0);
 
   fill(200,200,0);
   textSize(20);
@@ -56,15 +56,16 @@ var display = function(){
     text(star, starXPos[i], starYPos[i]);
   }
 
-  fill(0,0,0);
-  rect(0,400,600,50);
+  fill(173,208,179);
+  noStroke();
+  rect(0,570,790,70);
   fill(255,255,255);
-  text("Find The " + planet + "s   |   " + planet + " " + planetFound + "/" + planetTotal, 0, 425);
+  text("Find The " + planet + "s   |   " + planet + " " + planetFound + "/" + planetTotal, 50, 595);
 
   if(planetFound == planetTotal){
-    fill(0, 200, 200);
+    fill(47,76,57);
     textSize(50);
-    text("Press 'r' to restart \nthe game", 50, 200);
+    text("Press 'r' to restart the game", 50, 200);
   }
 }
 

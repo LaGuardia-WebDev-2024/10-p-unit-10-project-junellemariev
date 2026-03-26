@@ -39,7 +39,7 @@ var backgroundImage1 = 0;
 mouseClicked = function(){
   check(mouseX, mouseY);
 
-  if(mouseY>435){
+  if(mouseY>435 && mouseY<493 && mouseX>407 && mouseX<490){
       backgroundImage1 = 1;
   }
 
@@ -56,7 +56,7 @@ var check = function(xClick, yClick){
   }
 }
 
-var funImage = loadImage("https://static.vecteezy.com/system/resources/thumbnails/007/994/607/small/rainbow-coloured-hand-painted-watercolour-background-free-vector.jpg");
+var funImage = loadImage("https://s.tmimgcdn.com/scr/800x500/124800/interior-retail-shelf-store-illustration_124877-original.jpg");
 
 var display = function(){
   background(100,100,100,0);

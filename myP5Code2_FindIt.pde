@@ -17,12 +17,18 @@ setup = function() {
 }
 
 draw = function(){   
+  backgroundImage1 = 0
 
    if(keyPressed){
     if(key == 'r'){
       reset();
     }
    }
+
+if(backgroundImage1 == 1) {
+   planet = "."
+   star = "."
+}
 
   display();
 
@@ -38,12 +44,14 @@ var backgroundImage1 = 0;
 //change scene
 mouseClicked = function(){
   check(mouseX, mouseY);
-
+  console.log("clicked");
   if(mouseY>435 && mouseY<493 && mouseX>407 && mouseX<490){
+      console.log("clicked here");
       backgroundImage1 = 1;
   }
-
 }
+
+
 
 //heart being clicked
 var check = function(xClick, yClick){

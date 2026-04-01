@@ -17,7 +17,7 @@ setup = function() {
 }
 
 draw = function(){   
-  backgroundImage1 = 0
+  
 
    if(keyPressed){
     if(key == 'r'){
@@ -25,17 +25,31 @@ draw = function(){
     }
    }
 
-if(backgroundImage1 == 1) {
-   planet = "."
-   star = "."
-}
-
   display();
 
 var label = mouseX + "," + mouseY;
 fill(40,40,40)
 textSize(30);
 text(label, 50, 100);
+
+
+  //kuromi's grocery store
+  if(backgroundImage1 == 1) {
+
+var milkX = 218;
+  while(milkX < 368){
+    textSize(50);
+    text("🧋",milkX,290);
+    milkX += 30;
+  }
+
+var candyX = 5
+  for(candyX=5; candyX<205; x+=20){
+    textSize(50);
+    text("🍭",candyX,400,candyX);
+  }
+
+}
 
 }
 
@@ -49,7 +63,15 @@ mouseClicked = function(){
       console.log("clicked here");
       backgroundImage1 = 1;
   }
+
+  //kuromi's grocery store
+  if(backgroundImage1 == 1) {
+   planet = ".";
+   star = ".";
+  }
+
 }
+
 
 
 

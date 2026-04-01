@@ -43,10 +43,15 @@ var milkX = 218;
     milkX += 30;
   }
 
-var candyX = 5
-  for(candyX=5; candyX<205; x+=20){
-    textSize(50);
-    text("🍭",candyX,400,candyX);
+var myCandies = ["🍭","🍫","🍰","🍪"];
+
+var candyX = 0;
+  for(candyX=0; candyX<200; candyX+=40){
+    textSize(45);
+    text(myCandies[0],candyX,300);
+    text(myCandies[3],candyX,380);
+    text(myCandies[1],candyX,458);
+    text(myCandies[2],candyX,523);
   }
 
 }

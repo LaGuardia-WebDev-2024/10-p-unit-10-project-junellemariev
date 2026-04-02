@@ -25,7 +25,7 @@ draw = function(){
     }
     //this code isn't working TBD (╥﹏╥)
     if(key == 'b'){
-      setup();
+      backgroundImage1 = 0;
     }
    }
 
@@ -80,10 +80,15 @@ mouseClicked = function(){
       backgroundImage1 = 1;
   }
 
-  //kuromi's grocery store
+  //emoji change
   if(backgroundImage1 == 1) {
    planet = ".";
    star = ".";
+  }
+
+  if(backgroundImage1 == 0){
+    star = "✨";
+    planet = "💛";
   }
 
 }

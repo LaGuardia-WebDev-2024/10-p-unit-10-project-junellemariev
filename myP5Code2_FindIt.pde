@@ -23,6 +23,10 @@ draw = function(){
     if(key == 'r'){
       reset();
     }
+    //this code isn't working TBD (╥﹏╥)
+    if(key == 'b'){
+      setup();
+    }
    }
 
   display();
@@ -41,6 +45,13 @@ var milkX = 218;
     textSize(50);
     text("🧋",milkX,290);
     milkX += 30;
+
+  fill(173,208,179);
+  noStroke();
+  rect(0,570,790,70);
+  fill(255,255,255);
+  textSize(20);
+  text("Press b to go back!", 50, 595);
   }
 
 var myCandies = ["🍭","🍫","🍰","🍪"];
